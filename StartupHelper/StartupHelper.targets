@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug.Net2' Or '$(Configuration)' == 'Release.Net2' ">
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>..\packages\TaskScheduler.2.5.12\lib\net20\Microsoft.Win32.TaskScheduler.dll</HintPath>
+	  <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug.Net3.5' Or '$(Configuration)' == 'Release.Net3.5' ">
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>..\packages\TaskScheduler.2.5.12\lib\net35\Microsoft.Win32.TaskScheduler.dll</HintPath>
+	  <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug.Net4' Or '$(Configuration)' == 'Release.Net4' ">
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>..\packages\TaskScheduler.2.5.12\lib\net40\Microsoft.Win32.TaskScheduler.dll</HintPath>
+	  <Private>True</Private>
+    </Reference>
+  </ItemGroup>  
+  <Target Name="AfterBuild">
+    <GetAssemblyIdentity AssemblyFiles="$(OutputPath)$(AssemblyName).dll">
+      <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Message Text="Info: %(OutputAssemblyInfo.Version)" />
+  </Target>
+  <Target Name="Package">
+    <RemoveDir Directories="NuGet" />
+    <MakeDir Directories="NuGet" />
+    <Exec WorkingDirectory="$(BuildDir)" Command="NuGet.exe pack -Verbosity detailed -Symbols -OutputDir &quot;NuGet&quot; -Version %(OutputAssemblyInfo.Version) -Properties &quot;Configuration=$(Configuration)&quot;" />
+  </Target>
+  <Target Name="Publish">
+    <Exec WorkingDirectory="$(BuildDir)" Command="NuGet.exe push &quot;NuGet\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; -Verbosity detailed" />
+  </Target>
+</Project>

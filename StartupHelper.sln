@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartupHelper", "StartupHelper\StartupHelper.csproj", "{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug.Net2|Any CPU = Debug.Net2|Any CPU
+		Debug.Net35|Any CPU = Debug.Net35|Any CPU
+		Debug.Net4|Any CPU = Debug.Net4|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release.Net2|Any CPU = Release.Net2|Any CPU
+		Release.Net35|Any CPU = Release.Net35|Any CPU
+		Release.Net4|Any CPU = Release.Net4|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Debug.Net2|Any CPU.ActiveCfg = Debug.Net2|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Debug.Net35|Any CPU.ActiveCfg = Debug.Net3.5|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Debug.Net4|Any CPU.ActiveCfg = Debug.Net4|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Debug|Any CPU.ActiveCfg = Debug.Net4|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Release.Net2|Any CPU.ActiveCfg = Release.Net2|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Release.Net35|Any CPU.ActiveCfg = Release.Net3.5|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Release.Net4|Any CPU.ActiveCfg = Release.Net4|Any CPU
+		{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}.Release|Any CPU.ActiveCfg = Release.Net4|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
