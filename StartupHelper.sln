@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartupHelper", "StartupHelper\StartupHelper.csproj", "{5D71AD0C-A697-4CB1-B7A4-8395BA7D6D4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartupHelper.Sample", "StartupHelper.Sample\StartupHelper.Sample.csproj", "{D7818B4E-6D49-462E-BDBB-E1B9CDFC8D65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug.Net2|Any CPU = Debug.Net2|Any CPU
