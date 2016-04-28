@@ -13,15 +13,5 @@
     </metadata>
     <files>
 		<file src="readme.txt" target="" />
-        <file src="bin\Release.Net2\StartupHelper.dll" target="lib\net20\StartupHelper.dll" />
-        <file src="bin\Release.Net2\StartupHelper.pdb" target="lib\net20\StartupHelper.pdb" />
-        <file src="bin\Release.Net2\StartupHelper.xml" target="lib\net20\StartupHelper.xml" />
-        <file src="bin\Release.Net3.5\StartupHelper.dll" target="lib\net35\StartupHelper.dll" />
-        <file src="bin\Release.Net3.5\StartupHelper.pdb" target="lib\net35\StartupHelper.pdb" />
-        <file src="bin\Release.Net3.5\StartupHelper.xml" target="lib\net35\StartupHelper.xml" />
-        <file src="bin\Release.Net4\StartupHelper.dll" target="lib\net40\StartupHelper.dll" />
-        <file src="bin\Release.Net4\StartupHelper.pdb" target="lib\net40\StartupHelper.pdb" />
-        <file src="bin\Release.Net4\StartupHelper.xml" target="lib\net40\StartupHelper.xml" />
-        <file src="**\*.cs" target="src" />
     </files>
 </package>
