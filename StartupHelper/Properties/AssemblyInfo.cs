@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Startup Helper")]
-[assembly: AssemblyDescription("A .Net library to add or remove your program to the startup list as well as detecting the startup session")]
+[assembly: AssemblyTitle("A .Net library to add or remove your program to the startup list as well as detecting the startup session")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Soroush Falahati")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Startup Helper")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
