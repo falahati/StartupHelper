@@ -1,11 +1,13 @@
 # Startup Helper Class Library
 A .Net library to add or remove your program to the startup list as well as detecting the startup session. Supporting Windows XP+ with and without administrator rights.
 
-### WHERE TO FIND
+## WHERE TO FIND
 This library is available as a NuGet package at [nuget.org](https://www.nuget.org/packages/StartupHelper/).
 
+## Donation
+[<img width="24" height="24" src="http://icons.iconarchive.com/icons/sonya/swarm/256/Coffee-icon.png"/>**Every coffee counts! :)**](https://www.coinpayments.net/index.php?cmd=_donate&reset=1&merchant=820707aded07845511b841f9c4c335cd&item_name=Donate&currency=USD&amountf=10.00000000&allow_amount=1&want_shipping=0&allow_extra=1)
 
-### HOW TO USE
+## HOW TO USE
 First you need to create a `StartupManager` object for your program. I recomment doing so by defining a new public field or property in the `Program` class of your application.
 ```C#
   public static StartupManager Startup = 
@@ -18,18 +20,18 @@ Then, using this object, you can query your application startup status, register
 Check the 'UACHelper.Sample' project for basic usage of the class.
 ![Screenshot](/screenshot.jpg?raw=true "Screenshot")
 
-### MEMBERS
-#####[Primary Members]
+## MEMBERS
+### [Primary Members]
 * `StartupManager.IsStartedUp` This property indicates if the current session started automatically
 * `StartupManager.Register()` Using this method you can register your program for auto start. You can also specify required arguments to be send to your application.
 * `StartupManager.Unregister()` Unregisters the startup rule.
 
-#####[Other Useful Members]
+### [Other Useful Members]
 * `StartupManager.CommandLineArguments` Returns the arguments used to start the program. Except the auto startup indicator argument, if presented
 * `StartupManager.WorkingDirectory` Can be used to set or get the expected working directory to be used for registering the rule
 * `StartupManager.IsElevated` Returns a `Boolean` indicating the current elevation status of the application.
 
-### LICENSE
+## LICENSE
 The MIT License (MIT)
 
 Copyright (c) 2016 Soroush
