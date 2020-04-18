@@ -49,7 +49,7 @@ namespace StartupHelper
         ///     rights
         /// </param>
         public StartupManager(string name, RegistrationScope scope, bool needsAdminPrivileges)
-            : this(Assembly.GetEntryAssembly().Location, name, scope, needsAdminPrivileges)
+            : this(Assembly.GetEntryAssembly()?.Location, name, scope, needsAdminPrivileges)
         {
             FixWorkingDirectory();
         }
@@ -184,7 +184,7 @@ namespace StartupHelper
         public StartupManager(string applicationImage, string name, RegistrationScope scope, bool needsAdminPrivileges,
             StartupProviders provider, string startupSpecialArgument)
         {
-            if (!File.Exists(applicationImage))
+            if (string.IsNullOrEmpty(applicationImage) || !File.Exists(applicationImage))
             {
                 throw new ArgumentException("File doesn't exist.", nameof(applicationImage));
             }
@@ -233,8 +233,7 @@ namespace StartupHelper
             get
             {
                 var currentUser = WindowsIdentity.GetCurrent();
-                return currentUser != null &&
-                       new WindowsPrincipal(currentUser).IsInRole(WindowsBuiltInRole.Administrator);
+                return new WindowsPrincipal(currentUser).IsInRole(WindowsBuiltInRole.Administrator);
             }
         }
 
@@ -442,7 +441,7 @@ namespace StartupHelper
                                 : TaskRunLevel.LUA;
                             if (RegistrationScope == RegistrationScope.Local)
                             {
-                                taskTrigger.UserId = WindowsIdentity.GetCurrent()?.Name;
+                                taskTrigger.UserId = WindowsIdentity.GetCurrent().Name;
                             }
                         }
                         else
@@ -460,7 +459,7 @@ namespace StartupHelper
                         else
                         {
                             newTask.Principal.LogonType = TaskLogonType.InteractiveToken;
-                            newTask.Principal.UserId = WindowsIdentity.GetCurrent()?.Name;
+                            newTask.Principal.UserId = WindowsIdentity.GetCurrent().Name;
                         }
                         newTask.Actions.Add(taskAction);
                         newTask.Triggers.Add(taskTrigger);
@@ -507,7 +506,7 @@ namespace StartupHelper
             try
             {
                 return ((SecurityIdentifier) (new NTAccount(username).Translate(typeof (SecurityIdentifier)))) ==
-                       WindowsIdentity.GetCurrent()?.User;
+                       WindowsIdentity.GetCurrent().User;
             }
             catch
             {
