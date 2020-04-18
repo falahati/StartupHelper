@@ -1,13 +1,26 @@
 # Startup Helper Class Library
+[![](https://img.shields.io/github/license/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/blob/master/LICENSE)
+[![](https://img.shields.io/github/commit-activity/y/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/commits/master)
+[![](https://img.shields.io/github/issues/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/issues)
 A .Net library to add or remove your program to the startup list as well as detecting the startup session. Supporting Windows XP+ with and without administrator rights.
 
-## WHERE TO FIND
+## How to get
+[![](https://img.shields.io/nuget/dt/StartupHelper.svg?style=flat-square)](https://www.nuget.org/packages/StartupHelper)
+[![](https://img.shields.io/nuget/v/StartupHelper.svg?style=flat-square)](https://www.nuget.org/packages/StartupHelper)
+
 This library is available as a NuGet package at [nuget.org](https://www.nuget.org/packages/StartupHelper/).
 
-## Donation
-[<img width="24" height="24" src="http://icons.iconarchive.com/icons/sonya/swarm/256/Coffee-icon.png"/>**Every coffee counts! :)**](https://www.coinpayments.net/index.php?cmd=_donate&reset=1&merchant=820707aded07845511b841f9c4c335cd&item_name=Donate&currency=USD&amountf=10.00000000&allow_amount=1&want_shipping=0&allow_extra=1)
+## Help me fund my own Death Star
 
-## HOW TO USE
+[![](https://img.shields.io/badge/crypto-CoinPayments-8a00a3.svg?style=flat-square)](https://www.coinpayments.net/index.php?cmd=_donate&reset=1&merchant=820707aded07845511b841f9c4c335cd&item_name=Donate&currency=USD&amountf=20.00000000&allow_amount=1&want_shipping=0&allow_extra=1)
+[![](https://img.shields.io/badge/shetab-ZarinPal-8a00a3.svg?style=flat-square)](https://zarinp.al/@falahati)
+[![](https://img.shields.io/badge/usd-Paypal-8a00a3.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ramin.graphix@gmail.com&lc=US&item_name=Donate&no_note=0&cn=&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
+
+**--OR--**
+
+You can always donate your time by contributing to the project or by introducing it to others.
+
+## How to use
 First you need to create a `StartupManager` object for your program. I recomment doing so by defining a new public field or property in the `Program` class of your application.
 ```C#
   public static StartupManager Startup = 
@@ -20,7 +33,7 @@ Then, using this object, you can query your application startup status, register
 Check the 'UACHelper.Sample' project for basic usage of the class.
 ![Screenshot](/screenshot.jpg?raw=true "Screenshot")
 
-## MEMBERS
+## Documentation
 ### [Primary Members]
 * `StartupManager.IsStartedUp` This property indicates if the current session started automatically
 * `StartupManager.Register()` Using this method you can register your program for auto start. You can also specify required arguments to be send to your application.
@@ -31,10 +44,10 @@ Check the 'UACHelper.Sample' project for basic usage of the class.
 * `StartupManager.WorkingDirectory` Can be used to set or get the expected working directory to be used for registering the rule
 * `StartupManager.IsElevated` Returns a `Boolean` indicating the current elevation status of the application.
 
-## LICENSE
+## License
 The MIT License (MIT)
 
-Copyright (c) 2016 Soroush
+Copyright (c) 2016-2020 Soroush
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
