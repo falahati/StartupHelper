@@ -2,6 +2,7 @@
 [![](https://img.shields.io/github/license/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/blob/master/LICENSE)
 [![](https://img.shields.io/github/commit-activity/y/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/commits/master)
 [![](https://img.shields.io/github/issues/falahati/StartupHelper.svg?style=flat-square)](https://github.com/falahati/StartupHelper/issues)
+
 A .Net library to add or remove your program to the startup list as well as detecting the startup session. Supporting Windows XP+ with and without administrator rights.
 
 ## How to get
